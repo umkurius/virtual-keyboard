@@ -59,4 +59,8 @@
 
 .hidden {
   display: none;
+}
+
+.active {
+  background-color: aqua;
 }/*# sourceMappingURL=style.css.map */

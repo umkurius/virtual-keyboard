@@ -2,6 +2,7 @@ let btn = document.querySelector('.win');
 let capsbtn = document.querySelector('.capslock');
 let shiftBtn = document.querySelector('.shiftleft');
 let keyboard = document.querySelector('.keyboard');
+const keys = document.querySelectorAll('.keyboard__key');
 const eng = document.querySelectorAll('.keyboard__row_eng');
 const rus = document.querySelectorAll('.keyboard__row_rus');
 const down = document.querySelectorAll('.down');
@@ -59,4 +60,18 @@ window.addEventListener('keyup', e => {
     })
   }
 })
-
+window.addEventListener('keydown', e => {
+  console.log(e.code)
+  for (let i=0; i<keys.length; i++) {
+    if (e.code == keys[i].dataset.keycode) {
+      keys[i].classList.add('active');
+    }
+  }
+})
+window.addEventListener('keyup', e => {
+  for (let i=0; i<keys.length; i++) {
+    if (e.code == keys[i].dataset.keycode) {
+      keys[i].classList.remove('active');
+    }
+  }
+})
