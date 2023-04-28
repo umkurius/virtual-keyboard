@@ -45,7 +45,19 @@ window.addEventListener('keydown', e => {
   }
 });
 
-window.addEventListener('keyup', (e) => {
+window.addEventListener('keyup', e => {
+  if (e.code === 'CapsLock') {
+    down.forEach(el => {
+      if (el.dataset.caps === 'true') {
+        el.classList.toggle('hidden');
+      }
+    });
+    up.forEach(el => {
+      if (el.dataset.caps === 'true') {
+        el.classList.toggle('hidden');
+      }
+    });
+  }
 });
 window.addEventListener('keyup', e => {
   if (e.code === 'ShiftLeft' || e.code === 'ShiftRight') {
@@ -66,7 +78,6 @@ window.addEventListener('keyup', e => {
   }
 });
 window.addEventListener('keydown', e => {
-  console.log(e.code);
   for (let i = 0; i < keys.length; i++) {
     if (e.code === keys[i].dataset.keycode) {
       keys[i].classList.add('active');
@@ -79,4 +90,8 @@ window.addEventListener('keyup', e => {
       keys[i].classList.remove('active');
     }
   }
+});
+
+window.addEventListener('keydown', e => {
+  console.log(e.code);
 });

@@ -12,7 +12,8 @@
 .keyboard {
   width: 704px;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: wrap;
   border: 1px solid #000;
   padding: 5px;
 }
@@ -33,28 +34,29 @@
   border-radius: 4px;
   text-align: center;
   line-height: 200%;
+  margin-left: 5px;
 }
 .keyboard__key:hover {
   background-color: aqua;
   cursor: pointer;
 }
-.keyboard .backspace,
-.keyboard .capslock,
-.keyboard .shiftleft {
+.keyboard .Backspace,
+.keyboard .CapsLock,
+.keyboard .ShiftLeft {
   width: 100px;
 }
-.keyboard .tab {
+.keyboard .Tab {
   width: 50px;
 }
-.keyboard .delete {
+.keyboard .Delete {
   width: 44px;
 }
-.keyboard .enter,
-.keyboard .shiftright {
+.keyboard .Enter,
+.keyboard .ShiftRight {
   width: 86px;
 }
-.keyboard .space {
-  width: 330px;
+.keyboard .Space {
+  width: 320px;
 }
 
 .hidden {
