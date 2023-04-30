@@ -65,4 +65,13 @@
 
 .active {
   background-color: aqua;
+}
+
+.active_caps {
+  background-color: aquamarine;
+}
+
+.textarea {
+  width: 704px;
+  min-height: 200px;
 }/*# sourceMappingURL=style.css.map */
