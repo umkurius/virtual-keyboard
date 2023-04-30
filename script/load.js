@@ -258,6 +258,7 @@ window.addEventListener('keyup', e => {
     }
   }
 });
+
 function check(symbol) {
   let firstPart = textarea.value.slice(0, textarea.selectionStart);
   const secondPart = textarea.value.slice(textarea.selectionStart);
@@ -266,6 +267,7 @@ function check(symbol) {
   textarea.value = sum;
   textarea.selectionEnd = firstPart.length;
 }
+
 window.addEventListener('keydown', e => {
   for (let i = 0; i < keys.length; i++) {
     if (e.code === keys[i].dataset.id
@@ -300,16 +302,29 @@ window.addEventListener('keydown', e => {
 window.addEventListener('click', e => {
   const target = e.target;
   if (target.innerText.length === 1) {
-    textarea.value += target.innerText;
+    check(target.innerText);
   }
   if (target.dataset.id === 'Backspace') {
-    textarea.value = textarea.value.slice(0, -1);
+    let firstPart = textarea.value.slice(0, textarea.selectionStart);
+    const secondPart = textarea.value.slice(textarea.selectionStart);
+    firstPart = firstPart.slice(0, -1);
+    const sum = firstPart + secondPart;
+    textarea.value = sum;
+    textarea.selectionEnd = firstPart.length;
+  }
+  if (target.dataset.id === 'Delete') {
+    const firstPart = textarea.value.slice(0, textarea.selectionStart);
+    let secondPart = textarea.value.slice(textarea.selectionStart);
+    secondPart = secondPart.slice(1);
+    const sum = firstPart + secondPart;
+    textarea.value = sum;
+    textarea.selectionEnd = firstPart.length;
   }
   if (target.dataset.id === 'Enter') {
-    textarea.value += '\n';
+    check('\n');
   }
   if (target.dataset.id === 'Space') {
-    textarea.value += ' ';
+    check(' ');
   }
 });
 textarea.addEventListener('click', () => {

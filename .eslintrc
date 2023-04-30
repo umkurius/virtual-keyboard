@@ -8,6 +8,10 @@
     "global-require": 0,
     "eslint linebreak-style": [0, "error", "windows"],
     "arrow-parens": ["error", "as-needed"],
-    "semi": "error"
+    "semi": "error",
+    "import/prefer-default-export": ["off"],
+    "import/extensions": ["off", {"js": "always"}],
+    "no-plusplus": ["off"],
+    "prefer-destructuring": ["off"]
   }
 }
