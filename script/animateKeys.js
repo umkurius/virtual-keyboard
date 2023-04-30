@@ -17,4 +17,22 @@ export function animateKeys() {
       }
     }
   });
+
+  window.addEventListener('mousedown', e => {
+    const target = e.target;
+    for (let i = 0; i < keys.length; i++) {
+      if (keys[i].classList.contains(target.dataset.id)) {
+        keys[i].classList.add('active');
+      }
+    }
+  });
+
+  window.addEventListener('mouseup', e => {
+    const target = e.target;
+    for (let i = 0; i < keys.length; i++) {
+      if (keys[i].classList.contains(target.dataset.id)) {
+        keys[i].classList.remove('active');
+      }
+    }
+  });
 }
