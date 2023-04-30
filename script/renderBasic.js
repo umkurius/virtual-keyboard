@@ -1,4 +1,10 @@
-import { main, textarea, keyboard, description, language } from './constants.js';
+import {
+  main,
+  textarea,
+  keyboard,
+  description,
+  language,
+} from './constants.js';
 
 export function renderBasic() {
   main.classList.add('container');

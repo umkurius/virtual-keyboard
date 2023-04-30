@@ -1,5 +1,5 @@
-import { render, renderRus } from "./renderKeys.js";
-import { keys, capsBtn } from "./constants.js";
+import { render, renderRus } from './renderKeys.js';
+import { keys, capsBtn } from './constants.js';
 
 export function changeLanguage() {
   window.addEventListener('keydown', e => {

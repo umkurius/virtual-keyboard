@@ -1,5 +1,5 @@
-import { keyboard } from "./constants.js";
-import { render } from "./renderKeys.js";
+import { keyboard } from './constants.js';
+import { render } from './renderKeys.js';
 
 export function renderKeyboardInner() {
   window.addEventListener('load', () => {

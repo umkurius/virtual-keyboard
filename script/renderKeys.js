@@ -1,4 +1,4 @@
-import { arr, keyboard } from "./constants.js";
+import { arr, keyboard } from './constants.js';
 
 export function render() {
   let out = '';
