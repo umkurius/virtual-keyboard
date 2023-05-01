@@ -1,5 +1,10 @@
 .textarea {
   width: 704px;
   min-height: 200px;
-  margin: 0 auto 20px;
+  margin: 0 auto 50px;
+  resize: none;
+  border: 1px solid #16B6C1;
+  color: #16B6C1;
+  font-size: 2rem;
+  background-color: transparent;
 }

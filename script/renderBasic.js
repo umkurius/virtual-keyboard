@@ -16,6 +16,9 @@ export function renderBasic() {
   keyboard.classList.add('keyboard');
   main.append(keyboard);
 
+  description.classList.add('paragraph');
   main.append(description);
+
+  language.classList.add('paragraph');
   main.append(language);
 }

@@ -144,5 +144,5 @@ export const keys = document.getElementsByClassName('keyboard__key');
 
 export const capsBtn = document.getElementsByClassName('CapsLock');
 
-description.innerText = 'Клавиатура создана в операционной системе Windows';
-language.innerText = 'Переключение языка: левыe ctrl + alt';
+description.innerText = 'Keyboard created in the Windows operating system';
+language.innerText = 'Change language: CtrlLeft + AltLeft';

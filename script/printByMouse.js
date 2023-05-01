@@ -1,7 +1,7 @@
 import { textarea, capsBtn, keys } from './constants.js';
 import { checkCursorPosition } from './checkCursorPosition.js';
 
-export function writeByMouse() {
+export function printByMouse() {
   window.addEventListener('click', e => {
     const target = e.target;
     if (target.innerText.length === 1) {

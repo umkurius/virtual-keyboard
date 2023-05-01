@@ -2,8 +2,8 @@ import { renderBasic } from './renderBasic.js';
 import { renderKeyboardInner } from './renderKeyboardInner.js';
 import { upShift, downShift, addCaps } from './serviceKeys.js';
 import { changeLanguage } from './changeLanguage.js';
-import { writeByKeys } from './writeByKeys.js';
-import { writeByMouse } from './writeByMouse.js';
+import { printByKeys } from './printByKeys.js';
+import { printByMouse } from './printByMouse.js';
 import { animateKeys } from './animateKeys.js';
 import { keyboard } from './constants.js';
 
@@ -13,11 +13,11 @@ upShift();
 downShift();
 addCaps();
 changeLanguage();
-writeByKeys();
-writeByMouse();
+printByKeys();
+printByMouse();
 animateKeys();
 
-// window.addEventListener('beforeunload', () => {
-//   const current = JSON.stringify(keyboard.innerHTML);
-//   localStorage.setItem('html', current);
-// });
+window.addEventListener('beforeunload', () => {
+  const current = JSON.stringify(keyboard.innerHTML);
+  localStorage.setItem('html', current);
+});
