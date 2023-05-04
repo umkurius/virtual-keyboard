@@ -1,0 +1,70 @@
+.keyboard {
+  width: 795px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  border: 1px solid #05171B;
+  border-radius: 5px;
+  padding: 7px 7px 0 0;
+  margin: 0 auto 20px;
+  background-color: #05171B;
+  user-select: none;
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    &_eng,
+    &_rus {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  &__key {
+    width: 45px;
+    height: 45px;
+    border: 2px solid #16B6C1;
+    border-radius: 4px;
+    text-align: center;
+    line-height: 250%;
+    margin-left: 7px;
+    margin-bottom: 7px;
+    background-color: #05171B;
+    color: #16B6C1;
+    font-size: 1rem;
+    transition: .2s;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  .Backspace,
+  .CapsLock,
+  .ShiftLeft {
+    width: 100px;
+  }
+  .Tab {
+    width: 50px;
+  }
+  .Delete {
+    width: 44px;
+  }
+  .Enter,
+  .ShiftRight {
+    width: 86px;
+  }
+  .Space {
+    width: 320px;
+  }
+}
+.hidden {
+  display: none;
+}
+.active {
+  transform: scale(.9);
+  box-shadow: 2px 2px 5px #16B6C1, 2px -2px 5px #16B6C1, -2px 2px 5px #16B6C1, -2px -2px 5px #16B6C1;
+  color: #1EEAF8;
+}
+.active_caps {
+  transform: scale(.9);
+  box-shadow: 2px 2px 5px #16B6C1, 2px -2px 5px #16B6C1, -2px 2px 5px #16B6C1, -2px -2px 5px #16B6C1;;
+}
