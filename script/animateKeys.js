@@ -25,6 +25,11 @@ export function animateKeys() {
         keys[i].classList.add('active');
       }
     }
+    for (let i = 0; i < keys.length; i++) {
+      keys[i].addEventListener('mouseout', () => {
+        keys[i].classList.remove('active');
+      });
+    }
   });
 
   window.addEventListener('mouseup', e => {
